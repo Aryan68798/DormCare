@@ -1,0 +1,106 @@
+/* Dashboard.css – Styles for the dashboard page */
+
+/* Stats row – 4 mini cards side by side */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow-glass);
+  transition: var(--transition);
+}
+.stat-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.stat-icon { 
+  font-size: 2rem; 
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--pure-white);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 10px;
+  color: var(--subtle);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* Module navigation grid */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.module-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-glass);
+  transition: var(--transition);
+}
+.module-card:hover {
+  border-color: var(--cyber-yellow);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  transform: translateY(-8px);
+}
+
+.module-card-icon {
+  font-size: 2.5rem;
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.module-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--pure-white);
+}
+
+.module-card-desc {
+  font-size: 1rem;
+  color: var(--subtle);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Full-width buttons inside module cards */
+.module-card .btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
