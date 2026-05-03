@@ -11,9 +11,6 @@ The goal of this project is to improve convenience, organization, and communicat
 - 🧹 **Room Cleaning Booking**  
   Students can schedule cleaning services for their rooms.
 
-- 🍽️ **Mess Meal Ordering**  
-  Order meals from the hostel mess and get them delivered to the room.
-
 - 🛠️ **Maintenance Requests**  
   Report issues such as electrical, plumbing, or other room problems.
 
@@ -35,7 +32,6 @@ The goal of this project is to improve convenience, organization, and communicat
 
 ### Tools
 - React Router
-- Git
 - GitHub
 
 ---
