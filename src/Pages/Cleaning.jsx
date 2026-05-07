@@ -57,7 +57,7 @@ function Cleaning() {
     <>
       <div className="liquid-header animate-in">
         <div className="container">
-          <h1 className="page-title">🧹 Room Cleaning</h1>
+          <h1 className="page-title">Room Cleaning</h1>
           <p className="page-subtitle">Book a housekeeping session for your room.</p>
         </div>
       </div>
@@ -106,7 +106,7 @@ function Cleaning() {
 
           {/* Error message – rendered only when error state has text */}
           {error && (
-            <div className="alert" style={{ background: '#FDECEA', color: '#B3261E', marginBottom: '16px' }}>
+            <div className="alert" style={{ background: '#e75545', color: '#e4e2e2', marginBottom: '16px', border: "2px solid white" }}>
               {error}
             </div>
           )}

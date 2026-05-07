@@ -11,7 +11,8 @@ function Landing() {
 
   // useState stores a greeting message that changes after 2 seconds
   // This demonstrates useEffect + useState working together
-  const [greeting, setGreeting] = useState('Welcome to DormCare 👋')
+  const [greeting, setGreeting] = useState('Welcome to DormCare ')
+
 
   // useEffect runs once after the component first renders (because [] dependency array)
   // After 2 seconds, it updates the greeting message
