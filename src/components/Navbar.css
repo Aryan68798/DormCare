@@ -49,8 +49,7 @@
 }
 
 .nav-link {
-  background: transparent;
-  border: 1px solid transparent;
+  border: 2px solid #165127;
   padding: 10px 20px;
   border-radius: var(--radius-pill);
   font-size: 0.95rem;
@@ -60,12 +59,11 @@
   transition: var(--transition);
 }
 .nav-link:hover { 
-  background: rgba(255, 255, 255, 0.05); 
-  color: var(--pure-white); 
+  color: #ffffff; 
 }
 .nav-link-active { 
-  background: var(--cyber-yellow); 
-  color: #000; 
+  background: #22a390; 
+  color: white; 
   font-weight: 800; 
 }
 

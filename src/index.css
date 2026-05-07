@@ -96,6 +96,8 @@ input, textarea, select {
 /* --- Liquid Header --- */
 .liquid-header {
   background: var(--cyber-yellow);
+  border:2px solid rgb(27, 95, 27);
+  border-top: none;
   padding: 60px 0 40px;
   border-bottom-right-radius: 80px;
   border-bottom-left-radius: 24px;
@@ -141,9 +143,10 @@ h3 { font-size: 1.5rem; font-weight: 700; }
   transition: var(--transition);
 }
 .card:hover { 
-  transform: translateY(-4px);
-  border-color: rgba(0, 0, 0, 0.2);
-  color:#165127;
+  transform: translateY(-12px);
+  border-color: rgba(6, 50, 26);
+  color:#ffffff;
+  background:#a3d9d0;
 }
 
 /* --- Form Elements --- */
@@ -166,11 +169,12 @@ h3 { font-size: 1.5rem; font-weight: 700; }
 .form-group textarea,
 .form-group select {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid #165127;
   border-radius: var(--radius-sm);
   padding: 16px 20px;
-  font-size: 1rem;
-  color: var(--on-surface);
+  font-size: 15px;
+  font-weight: 100;
+  color: #000000;
   transition: var(--transition);
   width: 100%;
 }
@@ -178,8 +182,9 @@ h3 { font-size: 1.5rem; font-weight: 700; }
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid #165127;
+  background: #22a390;
+  color:white;
 }
 
 .form-group textarea { resize: vertical; min-height: 120px; }
@@ -191,7 +196,7 @@ h3 { font-size: 1.5rem; font-weight: 700; }
   justify-content: center;
   gap: 12px;
   padding: 16px 36px;
-  border: none;
+  border: 2px solid #134c13;
   border-radius: var(--radius-pill);
   font-size: 1rem;
   font-weight: 700;
@@ -201,8 +206,8 @@ h3 { font-size: 1.5rem; font-weight: 700; }
 
 /* Primary filled */
 .btn-primary {
-  background: var(--cyber-yellow);
-  color: #000;
+  background: #d2e6e3;
+  color: #235034;
 }
 .btn-primary:hover {
   transform: scale(1.05);

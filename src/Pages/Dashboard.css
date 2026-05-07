@@ -21,9 +21,11 @@
   transition: var(--transition);
 }
 .stat-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: #08483e;
+  transform: translateY(-18px);
+  
+  background: #a3d9d0;
+  color:white;
 }
 
 .stat-icon { 
