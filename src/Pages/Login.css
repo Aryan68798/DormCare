@@ -1,0 +1,58 @@
+/* Login.css – Styles for the Login page */
+
+.login-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--deep-onyx);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: var(--radius-pill);
+}
+
+.login-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--pure-white);
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.login-subtitle {
+  color: var(--subtle);
+  font-size: 1rem;
+}
+
+.login-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--subtle);
+  margin-top: 24px;
+}
+
+.login-card .btn {
+  width: 100%;
+  margin-top: 8px;
+}

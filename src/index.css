@@ -328,12 +328,3 @@ h3 { font-size: 1.5rem; font-weight: 700; }
 }
 .empty-state .empty-icon { font-size: 4rem; margin-bottom: 24px; }
 .empty-state p { font-size: 1.1rem; }
-
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .page-title { font-size: 3rem; }
-  .page { padding: 40px 20px 80px; }
-  .card { padding: 24px; }
-  .btn  { padding: 14px 28px; }
-  h2 { font-size: 2rem; }
-}
