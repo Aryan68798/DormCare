@@ -9,8 +9,8 @@ const NAV_LINKS = [
 ]
 
 const Navbar = () => {
-  const navigate = useNavigate()    // function to navigate to a URL
-  const location = useLocation()    // current URL object
+  const navigate = useNavigate()
+  const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenu = () => setMenuOpen(prev => !prev)
   const handleNav = (path) => {
