@@ -39,8 +39,8 @@
 
 .trust-badge {
   display: inline-block;
-  background: #000;
-  color: var(--cyber-yellow);
+  background: #a3d9d0;
+  color: #08483e;
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -48,11 +48,13 @@
   padding: 8px 20px;
   border-radius: var(--radius-pill);
   margin-bottom: 24px;
+ 
+  border: 2px solid #08483e;
 }
 
 .hero-eyebrow {
   display: block;
-  color: #000;
+  color: #08483e;
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -63,11 +65,14 @@
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -2.5px;
-  color: #000; /* Massive black text on yellow */
+  color: #08483e; /* Massive black text on yellow */
   margin-bottom: 24px;
+  
 }
 .hero-title-accent {
-  color: #000;
+  color: #ffff;
+  font-weight: 300px;
+  -webkit-text-stroke: 1px #08483e;
 }
 
 .hero-description {
@@ -87,16 +92,17 @@
 
 /* For hero buttons on yellow background */
 .hero-actions .btn-primary {
-  background: #000;
-  color: #FFF;
+  background: #a3d9d0;
+  color: #08483e;
 }
 .hero-actions .btn-primary:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .hero-actions .btn-outline {
-  border-color: rgba(0,0,0,0.2);
-  color: #000;
+  border: 2px solid #08483e;
+  color: #08483e;
+  background-color: #a3d9d0;
 }
 .hero-actions .btn-outline:hover {
   border-color: #000;
@@ -114,7 +120,7 @@
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid #08483e;
   border-radius: 32px;
   padding: 32px;
   box-shadow: var(--shadow-glass);
@@ -237,9 +243,9 @@
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.02);
+  background:  #a3d9d0;
   backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 2px solid rgb(5, 44, 5);
   border-radius: var(--radius-lg);
   padding: 40px 32px;
   cursor: pointer;
@@ -257,6 +263,7 @@
   margin-bottom: 24px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.05);
+  border: 2px solid white;
   padding: 16px;
   border-radius: 24px;
 }
@@ -279,7 +286,11 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  background: var(--deep-onyx);
+  background: #7eb9af;
+  border-radius: 5%;
+  border-color: #08483e;
+  border:2px solid;
+  
 }
 .landing-footer h2 {
   font-size: 4rem;

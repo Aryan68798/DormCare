@@ -202,11 +202,12 @@ h3 { font-size: 1.5rem; font-weight: 700; }
   font-weight: 700;
   transition: var(--transition);
   letter-spacing: 0.5px;
+  background: #a3d9d0;
 }
 
 /* Primary filled */
 .btn-primary {
-  background: #d2e6e3;
+  background: #a3d9d0;
   color: #235034;
 }
 .btn-primary:hover {
