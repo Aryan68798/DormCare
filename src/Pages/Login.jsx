@@ -13,8 +13,13 @@ const Login = () => {
   const [error, setError] = useState('')
 
   const handleLogin = () => {
-    if (username.trim() === '' || roomNo.trim() === '') {
-      setError('⚠️ Please enter both your name and room number.')
+    if (username.trim() === '' || roomNo.trim() === '' || roomNo.length <= 4) {
+      if (username.trim() === '' || roomNo.trim() === ''){
+        setError('⚠️ Please enter both your name and room number.')
+      }
+      else{
+        setError('⚠️ Please enter password with minimum length 5.')
+      }
       return
     }
 
@@ -54,11 +59,12 @@ const Login = () => {
 
         
         <div className="form-group">
-          <label htmlFor="roomNo">Room Number</label>
+          <label htmlFor="roomNo">Password</label>
           <input
             id="roomNo"
-            type="text"
-            placeholder="e.g. B-204"
+            type="password"
+            placeholder="password"
+            minLength={5}
             value={roomNo}
             onChange={(e) => setRoomNo(e.target.value)}
             onKeyDown={handleKeyDown}

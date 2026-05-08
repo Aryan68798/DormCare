@@ -86,7 +86,7 @@ function Cleaning() {
             <label htmlFor="clean-room">Room Number</label>
             <input
               id="clean-room"
-              type="text"
+              type="number"
               placeholder="e.g. B-204"
               value={room}
               onChange={(e) => setRoom(e.target.value)}
@@ -98,7 +98,7 @@ function Cleaning() {
             <label htmlFor="clean-date">Preferred Date</label>
             <input
               id="clean-date"
-              type="date"
+              type="datetime-local"
               value={date}
               onChange={(e) => setDate(e.target.value)}
             />
