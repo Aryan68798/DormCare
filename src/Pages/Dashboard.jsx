@@ -1,25 +1,19 @@
-// Dashboard.jsx – The main hub page at route "/dashboard"
-// Displays summary stats and navigation cards to all four modules.
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Card from '../components/Card.jsx'
 import Button from '../components/Button.jsx'
 import './Dashboard.css'
 
-function Dashboard() {
+const Dashboard = () => {
   const navigate = useNavigate()
-
-  // useState stores a time-based greeting (Good Morning / Afternoon / Evening)
   const [timeGreeting, setTimeGreeting] = useState('')
 
-  // useEffect runs once when the component mounts
-  // It reads the current hour and sets an appropriate greeting
   useEffect(() => {
     const hour = new Date().getHours()
     if (hour < 12) setTimeGreeting('Good Morning')
     else if (hour < 17) setTimeGreeting('Good Afternoon')
     else setTimeGreeting('Good Evening')
-  }, [])  // [] means "run only once, on mount"
+  }, [])
 
   return (
     <>
@@ -31,7 +25,6 @@ function Dashboard() {
       </div>
       <div className="page">
 
-      {/* ── Stats Row ──────────────────────────────────── */}
       <div className="stats-row">
         <div className="stat-card">
           <span className="stat-icon">🧹</span>
@@ -56,12 +49,11 @@ function Dashboard() {
         </div>
       </div>
 
-      {/* ── Module Navigation Cards ─────────────────────── */}
+
       <h2 style={{ marginBottom: '20px', marginTop: '8px' }}>Quick Access</h2>
 
       <div className="module-grid">
 
-        {/* Cleaning Card */}
         <Card className="module-card" style={{ '--accent': '#6750A4' }}>
           <div className="module-card-icon">🧹</div>
           <h3 className="module-card-title">Room Cleaning</h3>
@@ -75,7 +67,7 @@ function Dashboard() {
           />
         </Card>
 
-        {/* Maintenance Card */}
+
         <Card className="module-card">
           <div className="module-card-icon">🔧</div>
           <h3 className="module-card-title">Maintenance</h3>
@@ -91,10 +83,8 @@ function Dashboard() {
 
       </div>
 
-      {/* ── Recent Activity ─────────────────────────────── */}
       <h2 style={{ marginTop: '40px', marginBottom: '16px' }}>Recent Activity</h2>
 
-      {/* These are hardcoded JSX items – no arrays, no .map() */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
 
         <div className="request-item">
