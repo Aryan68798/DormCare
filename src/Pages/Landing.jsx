@@ -1,6 +1,3 @@
-// Landing.jsx – The home/welcome page of DormCare
-// This is the first page a user sees when they visit "/"
-// useNavigate lets us redirect the user to /login when they click the CTA button
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Button from '../components/Button.jsx'
@@ -8,31 +5,21 @@ import './Landing.css'
 
 function Landing() {
   const navigate = useNavigate()
-
-  // useState stores a greeting message that changes after 2 seconds
-  // This demonstrates useEffect + useState working together
   const [greeting, setGreeting] = useState('Welcome to DormCare ')
-
-
-  // useEffect runs once after the component first renders (because [] dependency array)
-  // After 2 seconds, it updates the greeting message
   useEffect(() => {
     const timer = setTimeout(() => {
       setGreeting('Your Hostel, Simplified ✨')
     }, 2000)
 
-    // Cleanup: cancel the timer if the user leaves the page early
     return () => clearTimeout(timer)
   }, [])
 
   return (
     <div className="landing">
-
-      {/* ── Hero Section ─────────────────────────────────── */}
       <section className="hero">
         <div className="hero-content animate-in">
           <div className="trust-badge">🏆 #1 Smart Hostel Platform</div>
-          {/* greeting state is displayed here – it changes after 2 seconds */}
+
           <p className="hero-eyebrow">{greeting}</p>
 
           <h1 className="hero-title">
@@ -44,7 +31,7 @@ function Landing() {
             Book cleaning sessions and raise maintenance requests – all from one beautiful dashboard.
           </p>
 
-          {/* CTA button – navigate to /login when clicked */}
+
           <div className="hero-actions">
             <Button
               label="Get Started"
@@ -61,7 +48,7 @@ function Landing() {
           </div>
         </div>
 
-        {/* Illustration card */}
+
         <div className="hero-visual animate-in">
           <div className="hero-card">
             <div className="hero-card-row">
@@ -86,7 +73,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* ── Logo Ticker (The Void) ─────────────────────────── */}
       <section className="logo-ticker">
         <p className="ticker-label">TRUSTED BY TOP UNIVERSITIES</p>
         <div className="ticker-track">
@@ -101,13 +87,11 @@ function Landing() {
         </div>
       </section>
 
-      {/* ── Feature Cards ─────────────────────────────────── */}
       <section className="features">
         <h2 className="features-title">Everything you need</h2>
         <p className="features-sub">Two powerful modules, one simple app.</p>
 
         <div className="features-grid">
-          {/* Each feature card is hardcoded JSX – no arrays, no map() */}
 
           <div className="feature-card" onClick={() => navigate('/cleaning')}>
             <div className="feature-icon">🧹</div>
@@ -123,7 +107,6 @@ function Landing() {
         </div>
       </section>
 
-      {/* ── Footer CTA ─────────────────────────────────── */}
       <section className="landing-footer">
         <h2>Ready to get started?</h2>
         <p>Join thousands of students managing hostel life the smart way.</p>
