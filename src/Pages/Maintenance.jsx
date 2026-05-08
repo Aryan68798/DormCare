@@ -1,63 +1,38 @@
-// Maintenance.jsx – Maintenance Request page at route "/maintenance"
-// Users pick an issue type from a dropdown, describe the problem,
-// and submit. The request is added to a live list below the form.
 import React, { useState } from 'react'
 import Card from '../components/Card.jsx'
 import Button from '../components/Button.jsx'
 import './Maintenance.css'
 
 function Maintenance() {
-  // ── Form field states ─────────────────────────────────
-  // issueType stores the selected dropdown option
-  // description stores the text typed in the textarea
   const [issueType, setIssueType] = useState('')
   const [description, setDescription] = useState('')
   const [roomNo, setRoomNo] = useState('')
-
-  // ── Feedback states ───────────────────────────────────
-  // successMsg shows a green confirmation after submit
-  // error shows a red message if fields are empty
   const [successMsg, setSuccessMsg] = useState('')
   const [error, setError] = useState('')
-
-  // ── Requests list state ───────────────────────────────
-  // requests is an array of submitted maintenance objects
-  // Each object: { issueType, description, roomNo, time }
   const [requests, setRequests] = useState([])
-
-  // handleSubmit runs when the user clicks "Submit Request"
   const handleSubmit = () => {
-    // Validate – all three fields must be filled
     if (!issueType || !roomNo.trim() || !description.trim()) {
       setError('⚠️ Please fill in all fields before submitting.')
       setSuccessMsg('')
       return
     }
 
-    // Build the new request object
     const newRequest = {
       issueType,
       description,
       roomNo,
-      // Record the current time so we can show "Submitted at HH:MM"
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     }
-
-    // Add it to the top of the list (newest first)
     setRequests(prev => [newRequest, ...prev])
 
-    // Show confirmation and clear errors
     setSuccessMsg(`✅ Request submitted for Room ${roomNo}. We'll fix it soon!`)
     setError('')
 
-    // Reset the form fields back to empty/default
     setIssueType('')
     setDescription('')
     setRoomNo('')
   }
 
-  // issueIcon returns an emoji for each issue type
-  // This is a helper function – keeps JSX clean
   const issueIcon = (type) => {
     if (type === 'Electrical') return '⚡'
     if (type === 'Plumbing') return '🚿'
@@ -80,11 +55,9 @@ function Maintenance() {
 
       <div className="maintenance-layout">
 
-        {/* ── Submission Form ───────────────────────────── */}
         <Card className="animate-in">
           <h2 style={{ marginBottom: '24px' }}>Submit a Request</h2>
 
-          {/* Room number field */}
           <div className="form-group">
             <label htmlFor="maint-room">Room Number</label>
             <input
@@ -96,10 +69,8 @@ function Maintenance() {
             />
           </div>
 
-          {/* Issue type dropdown */}
           <div className="form-group">
             <label htmlFor="maint-issue">Issue Type</label>
-            {/* When the user selects an option, setIssueType updates the state */}
             <select
               id="maint-issue"
               value={issueType}
@@ -115,7 +86,6 @@ function Maintenance() {
             </select>
           </div>
 
-          {/* Description textarea */}
           <div className="form-group">
             <label htmlFor="maint-desc">Describe the Issue</label>
             <textarea
@@ -126,14 +96,12 @@ function Maintenance() {
             />
           </div>
 
-          {/* Error message – shown only when error state is non-empty */}
           {error && (
             <div className="alert" style={{ background: '#FDECEA', color: '#B3261E', marginBottom: '16px' }}>
               {error}
             </div>
           )}
 
-          {/* Success message – shown only when successMsg state is non-empty */}
           {successMsg && (
             <div className="alert alert-success">{successMsg}</div>
           )}
@@ -148,7 +116,6 @@ function Maintenance() {
           </div>
         </Card>
 
-        {/* ── Submitted Requests Panel ──────────────────── */}
         <div className="maint-requests-panel">
           <h2 style={{ marginBottom: '16px' }}>
             Active Requests
@@ -158,7 +125,6 @@ function Maintenance() {
           </h2>
 
           {requests.length === 0 ? (
-            // Empty state – shown before any request is submitted
             <div className="empty-state">
               <div className="empty-icon">🔧</div>
               <p>No maintenance requests yet.</p>
@@ -166,7 +132,6 @@ function Maintenance() {
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {/* Render each submitted request */}
               {requests.map((req, index) => (
                 <div className="request-item maint-item" key={index}>
                   <div className="maint-icon-wrap">
